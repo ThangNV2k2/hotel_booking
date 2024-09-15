@@ -1,0 +1,43 @@
+plugins:
+  - "@typescript-eslint"
+  - "react"
+  - "jsx-a11y"
+  - "react-hooks"
+  - "jest"
+  - "jest-dom"
+  - "no-secrets"
+  - "prettier"
+  - "import"
+extends:
+  - "plugin:@typescript-eslint/eslint-recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  - "plugin:@typescript-eslint/strict"
+  - "eslint:recommended"
+  - "plugin:import/recommended"
+  - "plugin:import/typescript"
+  - "plugin:jest/recommended"
+  - "plugin:jest-dom/recommended"
+  - "plugin:jsx-a11y/recommended"
+  - "plugin:prettier/recommended"
+  - "plugin:react-hooks/recommended"
+  - "plugin:react/recommended"
+  - "plugin:react/jsx-runtime"
+  - "react-app"
+rules:
+  "no-secrets/no-secrets": "off"
+  "react/prop-types": "off"
+  "@typescript-eslint/no-floating-promises":
+    - "error"
+    - ignoreVoid: true
+  "@typescript-eslint/no-unnecessary-condition": "off"
+  "@typescript-eslint/consistent-type-imports":
+    - "error"
+  "react/self-closing-comp":
+    - "error"
+  "import/no-unresolved": "off"
+parser: "@typescript-eslint/parser"
+parserOptions:
+  project: "./tsconfig.eslint.json"
+ignorePatterns:
+  - "src/generated"

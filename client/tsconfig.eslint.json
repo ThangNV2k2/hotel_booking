@@ -1,0 +1,16 @@
+// The main tsconfig.json excludes the test files, so we need to reset the `exclude` property here
+// so the tests are linted.
+{
+  // Extend the main config
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Ensure that nobody can accidentally use this config for a build
+    "noEmit": true
+  },
+  "exclude": [
+    // Defaults
+    "node_modules",
+    "bower_components",
+    "vendor"
+  ]
+}
